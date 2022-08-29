@@ -23,13 +23,13 @@ if(isset($_POST['bsimpan'])){
 //jika tombol ubah di klik
 if(isset($_POST['bubah'])){
     //persiapan ubah data 
-    $ubah = mysqli_query($koneksi, ("UPDATE tmhs SET 
+    $ubah = mysqli_query($koneksi, "UPDATE tmhs SET 
                             nim = '$_POST[tnim]',
                             nama = '$_POST[tnama]',
                             alamat = '$_POST[talamat]',
                             prodi = '$_POST[tprodi]'
-                        WHERE id_mhs = '$_POST[id_mhs]'
-                            "));
+                            WHERE id_mhs = '$_POST[id_mhs]'
+                            ");
     //jika Ubah sukses
     if($ubah){
         echo "<script> alert('Ubah data sukses');

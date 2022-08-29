@@ -80,16 +80,18 @@ include "koneksi.php";
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Alamat</label>
-                            <textarea class="form-control"
+                            <!-- <input type="text"
+                            class="form-control"
                             name="talamat"
-                            value="<?=$data['alamat']?>"
-                            rows="3"></textarea>
+                            value=""> -->
+                            <textarea class="form-control"name="talamat" rows="3"><?=$data['alamat']?></textarea>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Prodi</label>
-                            <select class="form-select" name="tprodi" >
-                                <option value="<?$data['prodi'] ?>"><?= $data['prodi']?> </option>
-                                <option value="D4 - Rekaya Perangkat Lunak">D4 - Rekaya Perangkat Lunak</option>
+                            <select class="form-select" name="tprodi">
+                                <option value="<?= $data['prodi'] ?>"><?= $data['prodi'] ?></option>
+                                <option value="D4 - Rekayasa Perangkat Lunak">D4 - Rekayasa Perangkat Lunak</option>
+                                <option value="D3 - Teknik Informatika">D3 - Teknik Informatika</option>
                                 <option value="D4 - Keamanan Sistem Informasi">D4 - Keamanan Sistem Informasi</option>
                             </select>
                         </div>
@@ -136,7 +138,7 @@ include "koneksi.php";
 
                 
 
-                <!-- Modal -->
+                <!-- Modal Tambah-->
                 <div class="modal fade" id="modalTambah" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -163,7 +165,7 @@ include "koneksi.php";
                             <label class="form-label">Prodi</label>
                             <select class="form-select" name="tprodi" >
                                 <option value="D3 - Teknik Informatika">D3 - Teknik Informatika</option>
-                                <option value="D4 - Rekaya Perangkat Lunak">D4 - Rekaya Perangkat Lunak</option>
+                                <option value="D4 - Rekayasa Perangkat Lunak">D4 - Rekayasa Perangkat Lunak</option>
                                 <option value="D4 - Keamanan Sistem Informasi">D4 - Keamanan Sistem Informasi</option>
                             </select>
                         </div>
