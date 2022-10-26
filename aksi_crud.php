@@ -4,10 +4,11 @@ include "koneksi.php";
 //jika tombol simpan di klik
 if(isset($_POST['bsimpan'])){
     //persiapan simpan data baru
-    $simpan = mysqli_query($koneksi, "INSERT INTO tmhs (nim, nama, alamat, prodi)
+    $simpan = mysqli_query($koneksi, "INSERT INTO tmhs (nim, nama, alamat, jenis_kelamin, prodi)
                                     VALUES ('$_POST[tnim]',
                                             '$_POST[tnama]',
                                             '$_POST[talamat]',
+                                            '$_POST[tjk]',
                                             '$_POST[tprodi]')");
     //jika simpan sukses
     if($simpan){
@@ -27,6 +28,7 @@ if(isset($_POST['bubah'])){
                             nim = '$_POST[tnim]',
                             nama = '$_POST[tnama]',
                             alamat = '$_POST[talamat]',
+                            jenis_kelamin = '$_POST[tjk]',
                             prodi = '$_POST[tprodi]'
                             WHERE id_mhs = '$_POST[id_mhs]'
                             ");
